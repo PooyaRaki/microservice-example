@@ -10,7 +10,7 @@ This is an event-driven microservice example.
 
 ## Installation
 
-In order to install and run this microservices please have a look at each service README.md file.
+To install and run these microservices, please look at each service README.md file.
 
 ## License
 

@@ -1,11 +1,11 @@
 
 # Requestor
 
-This is the client to connect to the microservices.
+It is the client to connect to the microservices.
 ## Features
 
 - Produces a message to the `Broker` service to start processing the MessageRequest.
-- Polls the messaged produced inside `Requestor` queue into defined intervals.
+- Polls messages produced inside the `Requestor` queue into defined intervals.
 ## Tech Stack
 
 **Server:** Node.js, RabbitMQ
@@ -13,13 +13,13 @@ This is the client to connect to the microservices.
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you must add the following environment variables to your .env file.
 
 `NODE_ENV`
-The environment that we are running the application in e.g, `production`, `development`
+The environment that we are running the application in e.g. `production`, `development`
 
 `MICROSERVICE_INTERVAL`
-The interval of polling messgaes from broker
+The interval of polling messages from the broker
 
 `MICROSERVICE_TIMEOUT`
 The number of milliseconds after which the timeout error rises.
@@ -28,13 +28,13 @@ The number of milliseconds after which the timeout error rises.
 The name of `Broker` queue
 
 `BROKER_SERVICE_URL`
-The address of `Broker` rabbitMQ server e.g, `amqp://user:pass@127.0.0.1:5672`
+The address of `Broker` rabbitMQ server e.g. `amqp://user:pass@127.0.0.1:5672`
 
 `REQUESTOR_SERVICE_QUEUE`
 The name of `Requestor` queue
 
 `REQUESTOR_SERVICE_URL`
-The address of Requestor rabbitMQ server e.g, `amqp://user:pass@127.0.0.1:5672`
+The address of Requestor rabbitMQ server e.g. `amqp://user:pass@127.0.0.1:5672`
 ## Installation
 
 Install Requestor with npm
@@ -43,7 +43,7 @@ Install Requestor with npm
   npm install
   npm run build
 ```
-And then, run the project by:
+Then run the project by executing:
 ```bash
   npm run start:prod
 ```

@@ -1,10 +1,10 @@
 
 # B Service
 
-This is the Service that appends GoodBye to the MessageRequest.
+It is the service that appends GoodBye to the MessageRequest.
 ## Features
-- Consumes the event send by `Broker` service.
-- Produces a completed event into `Broker` queue.
+- Consumes the event sent by the `Broker` service.
+- Produces a completed event into the `Broker` queue.
 ## Tech Stack
 
 **Server:** Node, NestJs, RabbitMQ, Docker, Microservice
@@ -12,22 +12,22 @@ This is the Service that appends GoodBye to the MessageRequest.
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you must add the following environment variables to your .env file.
 
 `NODE_ENV`
-The environment that we are running the application in e.g, `production`, `development`
+The environment that we are running the application in e.g. `production`, `development`
 
 `APP_SERVICE_QUEUE`
 The name of `QueueB` queue
 
 `APP_SERVICE_URL`
-The address of `QueueB` rabbitMQ server e.g, `amqp://user:pass@127.0.0.1:5672`
+The address of `QueueB` rabbitMQ server e.g. `amqp://user:pass@127.0.0.1:5672`
 
 `BROKER_SERVICE_QUEUE`
 The name of `Broker` queue
 
 `BROKER_SERVICE_URL`
-The address of `Broker` rabbitMQ server e.g, `amqp://user:pass@127.0.0.1:5672`
+The address of `Broker` rabbitMQ server e.g. `amqp://user:pass@127.0.0.1:5672`
 
 ## Installation
 <br />
@@ -37,7 +37,7 @@ Install Requestor with npm
   npm install
   npm run build
 ```
-And then, run the project by:
+Then run the project by:
 ```bash
   npm run start:prod
 ```

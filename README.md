@@ -1,23 +1,40 @@
 
 # Microservice Example
 
-This is an event-driven microservice example.
+This project is an event-driven microservice example.
 ## Features
-This is consisted of 4 main Microservice: 
+It consists of 4 main Microservice: 
 - Requestor: a simple client to connect to the services and poll the results
 - Broker: A gateway to dispatch events
-- ServiceA: This is the service which appends a random name to the message
-- ServiceB: This service appends good bye to the end of the message
+- ServiceA: This is the service that appends a random name to the message
+- ServiceB: This service appends goodbye to the end of the message
 ## Tech Stack
 
 **Server:** Node, NestJs, RabbitMQ, PostgreSQL, Docker, Microservice
 
 
 ## Installation
+<br />
 
-In order to install and run this project:
+### **Docker**
+<br />
+
+To run this project with docker call the installer:
+```bash
+    sh install.sh
+    cd requestor
+    npm run start:prod
+```
+** **Environment variables** as described in the related README files must be carefully set.
+
+<br />
+
+### **Node**
+<br />
+
+To install and run this project manually:
 - Go through the readmes and Run each microservice separately.
-- Run the requestor with the help of Readme provided.
+- Run the requestor with the help of the Readme provided.
 ## License
 
 [GPL-3.0](https://github.com/PooyaRaki/microservice-example/blob/master/LICENSE)
