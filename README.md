@@ -3,7 +3,7 @@
 
 This is an event-driven microservice example.
 ## Features
-This is consists of 4 main Microservice: 
+This is consisted of 4 main Microservice: 
 - Requestor: a simple client to connect to the services and poll the results
 - Broker: A gateway to dispatch events
 - ServiceA: This is the service which appends a random name to the message
