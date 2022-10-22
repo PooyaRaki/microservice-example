@@ -1,0 +1,1 @@
+export * from './appendName.interface';
