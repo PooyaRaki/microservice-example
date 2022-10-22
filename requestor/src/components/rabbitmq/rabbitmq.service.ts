@@ -20,7 +20,7 @@ export class RabbitMQService {
     }
 
     /**
-     * Join a queue inside a channel
+     * Joins a queue inside a channel
      *
      * @param  {string} queueName Queue name
      *

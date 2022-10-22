@@ -1,10 +1,10 @@
 import { ProcessMessageDto } from "./dtos";
 import { Injectable } from "@nestjs/common";
-import { ServiceA } from "@components/serviceA";
+import { ServiceA } from "@components/serviceA/v1";
 import { AppendByeDto } from "./dtos/appendBye.dto";
 import { IProcessMessageResult } from "./interfaces";
 import { AppendNameDto } from "./dtos/appendName.dto";
-import { ServiceBService } from "@components/serviceB";
+import { ServiceBService } from "@components/serviceB/v1";
 import { MessageRequestService } from "@components/messageRequest/v1";
 import { RequestorService } from "@components/requestor/v1";
 

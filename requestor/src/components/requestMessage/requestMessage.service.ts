@@ -11,7 +11,7 @@ export class RequestMessageService {
      * @param  {string} messagePattern Message pattern
      * @param  {IRequestMessage} message Message content
      *
-     * @returns {void}
+     * @returns {Promise<IRequestMessage>}
      */
     public async fetch(messagePattern: string, message: IRequestMessage): Promise<IRequestMessage> {
         this.validateConsumedMessage(messagePattern);

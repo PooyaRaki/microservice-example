@@ -5,3 +5,4 @@ if (!process.env.NODE_ENV) {
 export * from './postgres.config';
 export * from './throttler.config';
 export * from './microservice.config';
+export * from './postgres.test.config';

@@ -6,6 +6,7 @@ export class request1666277482205 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`CREATE TABLE "Broker"."message_request" ("id" SERIAL NOT NULL, "token" character varying NOT NULL, "message" character varying NOT NULL, "createdAt" TIMESTAMP NOT NULL DEFAULT now(), "updatedAt" TIMESTAMP NOT NULL DEFAULT now(), CONSTRAINT "PK_167d324701e6867f189aed52e18" PRIMARY KEY ("id"))`);
         await queryRunner.query(`CREATE UNIQUE INDEX "token" ON "Broker"."message_request" ("token") `);
+        await queryRunner.query(`ALTER TABLE "Broker"."message_request" ADD CONSTRAINT "check_empty" CHECK (message <> '');`)
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {

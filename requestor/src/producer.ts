@@ -1,6 +1,6 @@
-import { RabbitMQService } from "@components/rabbitmq";
-import { BrokerMicroservice } from "@utils/configs/microservice";
-import { RequestMessageService } from "components/requestMessage";
+import { RabbitMQService } from '@components/rabbitmq';
+import { BrokerMicroservice } from '@utils/configs/microservice';
+import { RequestMessageService } from 'components/requestMessage';
 
 /**
  * Produces a message

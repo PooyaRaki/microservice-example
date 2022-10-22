@@ -1,5 +1,8 @@
 import { randomUUID } from 'crypto';
 
-export const UUID = (): string => {
-    return randomUUID();
-}
+/**
+ * Generates a new UUID
+ * 
+ * @returns {string} random uuid
+ */
+export const UUID = (): string => randomUUID();

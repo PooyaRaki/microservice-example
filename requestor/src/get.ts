@@ -1,10 +1,10 @@
-import { Channel } from "amqplib";
-import { AppConfig } from "@utils/configs";
-import { ParseMessage } from "@utils/helpers";
-import { RabbitMQService } from "@components/rabbitmq";
-import { AppMicroservice } from "@utils/configs/microservice";
-import { RequestMessageService } from "@components/requestMessage";
-import { IRequestMessage } from "@components/requestMessage/interfaces";
+import { Channel } from 'amqplib';
+import { AppConfig } from '@utils/configs';
+import { ParseMessage } from '@utils/helpers';
+import { RabbitMQService } from '@components/rabbitmq';
+import { AppMicroservice } from '@utils/configs/microservice';
+import { RequestMessageService } from '@components/requestMessage';
+import { IRequestMessage } from '@components/requestMessage/interfaces';
 
 /**
  * Fetch message from broker on an interval

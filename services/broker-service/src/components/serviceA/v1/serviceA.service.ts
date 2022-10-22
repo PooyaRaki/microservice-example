@@ -1,9 +1,9 @@
 import { Observable } from "rxjs";
-import { IAppendName } from "./interfaces";
 import { ClientProxy } from "@nestjs/microservices";
 import { Inject, Injectable } from "@nestjs/common";
 import { ServiceAConfig } from "@utils/configs/microservice";
 import { MessageRequest } from "@components/messageRequest/v1/entities";
+import { IAppendName } from "./interfaces";
 
 @Injectable()
 export class ServiceA {

@@ -1,6 +1,7 @@
-import { Column, CreateDateColumn, Entity, Index, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Check, Column, CreateDateColumn, Entity, Index, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity()
+@Check(`"message" <> ''`)
 export class MessageRequest {
     @PrimaryGeneratedColumn({
         type: 'int',
@@ -16,6 +17,7 @@ export class MessageRequest {
 
     @Column({
         type: 'varchar',
+        nullable: false,
     })
     public message: string;
 
