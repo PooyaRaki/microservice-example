@@ -25,7 +25,7 @@ To run this project with docker call the installer:
     cd requestor
     npm run start:prod
 ```
-** **Environment variables** as described in the related README files must be carefully set.
+** **Environment** variables described in the related README files must be carefully set.
 
 <br />
 
