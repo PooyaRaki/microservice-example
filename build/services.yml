@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  broker-service:
+    build:
+      context: ../services/broker-service
+      dockerfile: Dockerfile
+    networks:
+      - microservice_example
+    env_file:
+      - ../services/broker-service/.env
+    restart: always
+
+  a-service:
+    build:
+      context: ../services/a-service
+      dockerfile: Dockerfile
+    networks:
+      - microservice_example
+    env_file:
+      - ../services/a-service/.env
+    restart: always
+
+  b-service:
+    build:
+      context: ../services/b-service
+      dockerfile: Dockerfile
+    networks:
+      - microservice_example
+    env_file:
+      - ../services/b-service/.env
+    restart: always
+
+networks:
+  microservice_example:
+    external: true
