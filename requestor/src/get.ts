@@ -12,8 +12,8 @@ import { IRequestMessage } from '@components/requestMessage/interfaces';
  * @returns {Promise<void>}
  */
 export const FetchMessage = async (): Promise<IRequestMessage> => {
-    const broker = new RabbitMQService(AppMicroservice.url);
-    const channel = await (await broker.connect()).join(AppMicroservice.queue);
+    const broker = await RabbitMQService.getInstance(AppMicroservice.url);
+    const channel = await broker.join(AppMicroservice.queue);
 
     const message = await fetchMessageByInterval(channel);
 

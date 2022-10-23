@@ -1,13 +1,13 @@
 /**
  * Returns a random value of an array
  *
- * @param  {T[]} items Array
+ * @param  {string[]} items Array
  *
- * @returns {T | null} Random value
+ * @returns {string} Random value
  */
-export const ArrayRandom = <T>(items: T[]): T | null => {
+export const ArrayRandom = (items: string[]): string => {
     if (!items.length) {
-        return null;
+        return '';
     }
 
     return items[

@@ -10,8 +10,8 @@ import { RequestMessageService } from 'components/requestMessage';
  * @returns {Promise<void>}
  */
 export const ProduceMessage = async (message: string): Promise<void> => {
-    const broker = new RabbitMQService(BrokerMicroservice.url);
-    const channel = await (await broker.connect()).join(BrokerMicroservice.queue);
+    const broker = await RabbitMQService.getInstance(BrokerMicroservice.url);
+    const channel = await broker.join(BrokerMicroservice.queue);
 
     channel.sendToQueue(BrokerMicroservice.queue, await buildMessage(message));
 }
