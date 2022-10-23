@@ -57,12 +57,7 @@ describe('MessageRequestService', () => {
             const updateInput = { token: messageRequest.token, message: 'This is a test message - UPDATED' };
             const result = await messageRequestService.update(updateInput);
 
-            expect(result).toBeDefined();
-            expect(result).toHaveProperty('id');
-            expect(result.message).toBe(updateInput.message);
-
-            expect(IsUUID(result.token)).toBe(true);
-            expect(result.token).toBe(updateInput.token);
+            expect(result).toBe(true);
         });
 
         test('Should throw if the message is empty', async () => {

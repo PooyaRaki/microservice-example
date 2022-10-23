@@ -33,13 +33,19 @@ export class MessageRequestService {
      *
      * @param  {IUpdateMessageRequest} input Request input data
      *
-     * @returns {Promise<MessageRequest>} Returns a message request object
+     * @returns {Promise<boolean>} Returns true if updated, otherwise false
      */
-    public async update(input: IUpdateMessageRequest): Promise<MessageRequest> {
-        const messageRequest = await this.findByTokenOrFail({ token: input.token });
-        messageRequest.message = input.message;
+    public async update(input: IUpdateMessageRequest): Promise<boolean> {
+        const result = await this.MESSAGE_REQUEST_REPOSITORY
+            .createQueryBuilder()
+            .update(MessageRequest)
+            .set({
+                message: input.message,
+            })
+            .where('token = :token', { token: input.token })
+            .execute();
 
-        return await this.MESSAGE_REQUEST_REPOSITORY.save(messageRequest);
+            return result.affected !== undefined && result.affected > 0;
     }
 
     /**
