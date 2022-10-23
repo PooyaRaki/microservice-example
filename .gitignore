@@ -3,7 +3,6 @@
 **/node_modules
 **/statics
 **/*.log
-**/**.env
 /nginx/**.pem
 .vscode/
 **/.DS_Store
