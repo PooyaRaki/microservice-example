@@ -90,7 +90,7 @@ describe('MessageRequestService', () => {
         });
 
         test('Should return null if an invalid token is provided', async () => {
-            const result = await messageRequestService.findByToken({ token: 'tsfsdf' });
+            const result = await messageRequestService.findByToken({ token: 'INVALID_TOKEN' });
 
             expect(result).toBeNull();
         });
@@ -111,7 +111,9 @@ describe('MessageRequestService', () => {
         });
 
         test('Should throw an error if an invalid token is provided', async () => {
-            const result = async () => await messageRequestService.findByTokenOrFail({ token: 'tsfsdf', });
+            const result = async () => await messageRequestService.findByTokenOrFail(
+                { token: 'INVALID_TOKEN', },
+            );
 
             expect(result).rejects.toThrowError();
         });
